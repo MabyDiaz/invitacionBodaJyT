@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import './css/portada.css';
+@import './css/date.css';
+@import './css/eventos.css';
+@import './css/historia.css';
+@import './css/regalos.css';
+@import './css/interactivos.css';
+@import './css/album.css';
+@import './css/asistencia.css';
+@import './css/intro.css';
+
+/* General Styles */
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.player {
+  position: fixed;
+  right: 0px;
+  top: 20%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px 0px 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.player:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.player .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #e0b13acc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player .icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  width: 100%;
+  height: 2vh;
+  background-color: #232323;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  color: #ffffff;
+}
+
+.footer p i {
+  font-weight: 700;
+  color: #e0b13acc;
+}
+
+.footer p .color {
+  color: #e0b13acc;
+  font-weight: 700;
+}

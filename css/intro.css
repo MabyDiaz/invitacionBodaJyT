@@ -1,0 +1,64 @@
+.intro {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+}
+
+.intro img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.intro .up {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.intro .down {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.intro .bottom {
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-size: cover;
+  background-position: top;
+  position: absolute;
+  bottom: 0;
+  background-image: url('../img/envelopeb.png');
+}
+
+.intro .top {
+  z-index: 3100;
+  position: relative;
+}
+
+.intro .top .badge {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -75px;
+  cursor: pointer;
+  z-index: 3200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+
+.intro .top .badge:hover {
+  transform: scale(110%);
+}
+
+.intro .top .badge img {
+  width: 100%;
+}

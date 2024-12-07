@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1977d5c537.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+
+
+</head>
+
+<body>
+    <!-- Intro -->
+    <div class="intro" id="intro">
+        <div class="top" id="top">
+            <div class="badge" onclick="animar();">
+                <img src="./img/sello-sobre.png" />
+            </div>
+            <img src="./img/envelopet.png" class="top hiddenM" />
+            <img src="./img/envelopetm.png" class="top hiddenL" />
+        </div>
+        <div class="bottom" id="bottom"></div>
+    </div>
+
+
+
+    <!-- Portada -->
+    <section class="portada">
+        <div class="fotos-portada">
+            <img src="./img/hero.jpg" alt="Foto pareja 1">
+            <img src="./img/hero2.jpg" alt="Foto pareja 2">
+            <img src="./img/hero3.png" alt="Foto pareja 3">
+        </div>
+        <div class="texto-portada">
+            <h1>Juana & Tomás</h1>
+            <h2>¡Nos casamos!</h2>
+        </div>
+    </section>
+
+    <span class="player" id="button">
+        <div class="icon">
+            <img src="./img/pause.png" alt="Pause Icon" />
+        </div>
+    </span>
+    <audio id="player" loop>
+        <source src="./audio/AThousandYears.mpeg" type="audio/mp3" />
+        Tu navegador no soporta audio.
+    </audio>
+
+
+
+    <!-- Save The Date -->
+    <section class="save-the-date">
+        <h2>¡Reserva la fecha!</h2>
+        <div class="info">
+            <p class="fecha"><strong>15 de Diciembre de 2024</strong></p>
+        </div>
+        <div id="countdown">
+            <div class="time">
+                <div class="time-unit">
+                    <span class="number">12</span>
+                    <span class="label">días</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number">10</span>
+                    <span class="label">horas</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number">25</span>
+                    <span class="label">minutos</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number">45</span>
+                    <span class="label">segundos</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn-fecha" onclick="addToCalendar()"><i class="fa-regular fa-calendar-check"></i>Agendar
+            Fecha</button>
+    </section>
+
+
+    <!-- Eventos -->
+    <section class="events">
+        <article class="item">
+            <img src="./img/church-gold.png" alt="Iglesia">
+            <h2>Ceremonia</h2>
+            <div class="details">
+                <p><b>Parroquia María Reina</b></p>
+                <p>Av. Nuevo Mundo y Paysandú<br>B° Residencial América<br>Córdoba</p>
+                <p>15 de Diciembre, 19:30 hs.</p>
+            </div>
+            <a href="https://maps.app.goo.gl/WfamUzmzPmZC7Tpk7" target="_blank" class="cta">Cómo llegar</a>
+        </article>
+
+        <article class="item">
+            <img src="./img/champagne-glasses.png" alt="Copas de Champagne">
+            <h2>Festejo</h2>
+            <div class="details">
+                <p><b>La Florentina</b></p>
+                <p>Las Toscas 4822<br>Villa Esquiú<br>Córdoba</p>
+                <p>15 de Diciembre, 21:00 hs.</p>
+            </div>
+            <a href="https://maps.app.goo.gl/YcPM4aKudBHJrySU6" target="_blank" class="cta">Cómo llegar</a>
+        </article>
+
+        <article class="item">
+            <img src="./img/dress-code.png" alt="Traje y vestido">
+            <h2>Dress Code</h2>
+            <div class="details">
+                <p><b>Formal - Elegante</b></p>
+                <p>El Blanco queda reservado <br>para La Novia</p>
+            </div>
+            <a href="https://ar.pinterest.com/search/pins/?q=wedding%20dress%20code%20guide&rs=typed" target="_blank"
+                class="cta">Inspirate</a>
+        </article>
+    </section>
+
+
+    <!-- Nuestra historia -->
+    <section class="nuestra-historia">
+        <div class="content">
+            <h2>Nuestra Historia</h2>
+            <p>Todo comenzó con una mirada y una sonrisa en aquel lugar donde menos lo esperábamos. Desde ese momento,
+                nuestras vidas se entrelazaron de manera mágica, convirtiendo lo cotidiano en extraordinario. Cada día
+                juntos ha sido una aventura llena de aprendizajes, risas y sueños compartidos. Juana, con su alegría
+                desbordante, y Tomás, con su paciencia infinita, han encontrado en el otro un refugio donde ser
+                plenamente
+                ellos mismos.</p>
+            <p> Hoy, después de tantas experiencias vividas, hemos decidido dar un paso más en nuestro camino juntos.
+                Nuestra boda es la celebración del amor, la complicidad y los momentos que nos han hecho crecer como
+                pareja.
+                Queremos compartir este día tan especial con las personas que más queremos, porque ustedes son parte
+                fundamental de esta historia que sigue escribiéndose con cada latido de nuestros corazones.</p>
+        </div>
+    </section>
+
+
+    <!-- Interactivos -->
+    <section class="interactivos">
+        <div>
+            <i class="fa-brands fa-spotify"></i>
+            <h2>Nuestra Playlist</h2>
+            <p>Agrega nuestra playlist y recomendá las canciones que no pueden faltar en nuestra boda</p>
+            <a href="#" target="_blank">Ir a Spotify</a>
+        </div>
+
+        <div>
+            <i class="fa-brands fa-instagram"></i>
+            <h2>#NuestraBoda2024</h2>
+            <p>Sumate a la boda compartiendo fotos y videos con nuestro hashtag</p>
+            <a href="#" target="_blank">Ir a Instagram</a>
+        </div>
+    </section>
+
+
+    <!-- Álbum de fotos -->
+    <section class="album-fotos">
+        <span>Álbum de fotos</span>
+        <h2>Un Viaje de Amor</h2>
+        <div class="wall">
+            <div class="image"><img onclick="openModal(); currentSlide(1)" src="./img/jyt1.jpg" border="0" /></div>
+            <div class="image"><img onclick="openModal(); currentSlide(2)" src="./img/jyt2.jpg" border="0" /></div>
+            <div class="image"><img onclick="openModal(); currentSlide(3)" src="./img/jyt3.jpg" border="0" /></div>
+            <div class="image"><img onclick="openModal(); currentSlide(4)" src="./img/jyt4.jpg" border="0" /></div>
+            <div class="image"><img onclick="openModal(); currentSlide(5)" src="./img/jyt5.jpg" border="0" /></div>
+            <div class="image"><img onclick="openModal(); currentSlide(6)" src="./img/jyt6.jpg" border="0" /></div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="layer" onclick="closeModal()"></div>
+            <span class="close" onclick="closeModal()"><i class="fa-solid fa-times"></i></span>
+            <div class="modal-content">
+                <div class="mySlides"><img src="./img/jyt1.jpg" border="0" /></div>
+                <div class="mySlides"><img src="./img/jyt2.jpg" border="0" /></div>
+                <div class="mySlides"><img src="./img/jyt3.jpg" border="0" /></div>
+                <div class="mySlides"><img src="./img/jyt4.jpg" border="0" /></div>
+                <div class="mySlides"><img src="./img/jyt5.jpg" border="0" /></div>
+                <div class="mySlides"><img src="./img/jyt6.jpg" border="0" /></div>
+            </div>
+            <!-- Next/previous controls -->
+
+            <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angle-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angle-right"></i></a>
+
+        </div>
+    </section>
+
+
+
+    <!-- Opciones de Regalos -->
+    <section class="regalos">
+        <div class="content">
+            <div class="icono-regalo">
+                <img src="img/gift.gif" alt="Regalo animado" class="mi-gif">
+            </div>
+            <h2>Regalos</h2>
+            <p>
+                Tu presencia es lo más importante para nosotros.<br>
+                Si además deseas hacernos un regalo, puedes ayudarnos con nuestra luna de miel.
+            </p>
+            <button class="btn-mas-info" onclick="mostrarModal()">Más Información</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modalGift" id="modalRegalo">
+        <div class="contenido-modal">
+            <span class="closeModal" onclick="cerrarModal()">
+                <i class="fa-solid fa-times"></i>
+            </span>
+            <div class="item">
+                <div class="left">
+                    <h3>Cuenta Bancaria</h3>
+                </div>
+                <div class="right">
+                    <p>Caja de Ahorro en pesos<br> Titular: Juan Pérez<br>Alias: md.personalizados</p>
+                    <p class="cbu">CBU:</p>
+                    <input type="text" value="215478999526" id="GfGInput">
+                    <span onclick="copiarCBUModal()"><i class="fa-regular fa-copy"></i> Copiar CBU</span>
+                </div>
+            </div>
+            <hr>
+            <div class="item">
+                <div class="left">
+                    <h3>Urna en Salón</h3>
+                </div>
+                <div class="right">
+                    <p>En caso que prefieras regalar en efectivo, tendrás a disposición una urna y sobres en el salón
+                        durante la recepción.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Confirmación de asistencia -->
+    <section class="confirmation">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#e0b13acc"
+            width="70px" height="70px">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+        </svg>
+
+
+        <span>rsvp</span>
+        <h2>Confirmación de Asistencia</h2>
+        <p>Esperamos contar con tu presencia, no olvides confirmar</p>
+        <button class="link modal-button">
+            <i class="las la-check-circle"></i> Confirmar Asistencia
+        </button>
+
+        <!-- Modal -->
+        <div class="confirm" id="confirm">
+            <div class="contenido-modal">
+                <span class="closeModalConfirm">&times;</span>
+                <span class="rsvp">rsvp</span>
+                <h2>Confirmación de Asistencia</h2>
+                <form action="https://formspree.io/f/mnqrlxyz" 
+                method="POST" class="formulario-confirmacion">
+                    <div class="radio">
+                        <input type="radio" id="asistire" name="asistencia" value="si" checked>
+                        <label for="asistire">Asistiré</label>
+
+                        <input type="radio" id="no_asistire" name="asistencia" value="no">
+                        <label for="no_asistire">No Asistiré</label>
+                    </div>
+                    <label class="color-label">Apellido y Nombre:</label>
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+                    <label class="color-label">¿Necesitas un menú especial?</label>
+                    <select name="menu">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="celiaco">Celíaco</option>
+                        <option value="vegetariano">Vegetariano</option>
+                        <option value="vegano">Vegano</option>
+                        <option value="diabetico">Diabético</option>
+                    </select>
+                    <label class="color-label">Apellido y nombres de acompañantes (si corresponde):</label>
+                    <input type="text" name="acompanantes" placeholder="Nombres de acompañantes">
+                    <label class="color-label">Comentarios:</label>
+                    <textarea name="comentarios" placeholder="Escribe tus comentarios"></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>Hecho con <i class="fa-regular fa-heart"></i> por <span class="color">MDWeb</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

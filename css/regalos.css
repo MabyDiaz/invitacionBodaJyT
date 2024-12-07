@@ -1,0 +1,211 @@
+/* Estilo general */
+.regalos {
+  width: 100%;
+  padding: 120px 0px;
+  text-align: center;
+  background-image: url('../img/fondo-regalos1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.regalos .content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Icono */
+.icono-regalo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  margin-bottom: -10px;
+}
+
+.icono-regalo img {
+  width: 100%;
+}
+
+/* Título */
+.regalos h2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Frase inicial */
+.regalos p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Botón de más información */
+.btn-mas-info {
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #666666;
+  background-color: #0000001d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.btn-mas-info:hover {
+  background-color: #e0b13acc;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Información oculta */
+.info-oculta {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Detalle */
+.detalle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Títulos en los detalles */
+.detalle h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Separador */
+hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Modal */
+.modalGift {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido-modal {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: #e0b13acc;
+  cursor: pointer;
+}
+
+.closeModal:hover {
+  color: #ba973fcc;
+}
+
+.item {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item .left {
+  width: 40%;
+}
+
+.item .left h3 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: #ba973fcc;
+}
+
+.item .right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .right p {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.item .right .cbu {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ba973fcc;
+}
+
+.item input {
+  width: calc(100% - 50px);
+  border: none;
+  background: none;
+  color: #666;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.item span {
+  width: 30%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #666666;
+  background-color: #0000001d;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.item span:hover {
+  background-color: #e0b13acc;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.item span i {
+  font-size: 1rem;
+  color: #ba973fcc;
+}
+
+.item span:hover i {
+  color: #fff;
+}

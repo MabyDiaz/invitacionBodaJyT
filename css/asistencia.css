@@ -1,0 +1,226 @@
+.confirmation {
+  width: 100%;
+  padding: 120px 0px;
+  text-align: center;
+}
+
+.confirmation span {
+  display: block;
+  font-size: 12px;
+  margin: 10px 0;
+  font-weight: 700;
+  color: #e0b13acc;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.confirmation h2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 36px;
+  font-weight: 200;
+  color: #666;
+}
+
+.confirmation p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.confirmation .link {
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #666666;
+  background-color: #0000001d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.confirmation .link:hover {
+  background-color: #e0b13acc;
+  color: #fff;
+}
+
+.confirmation .link i {
+  font-size: 18px;
+  color: #e0b13acc;
+  margin-right: 8px;
+}
+
+.confirmation .link:hover i {
+  color: #fff;
+}
+
+/* ----------------------------------------------------------- */
+/* Modal Form*/
+.confirm {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm .contenido-modal {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+.confirm .closeModalConfirm {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #b49137;
+  transition: all 0.8s ease-in-out;
+}
+
+.confirm .closeModalConfirm:hover {
+  color: #ebb836;
+  transform: scale(1.1);
+}
+
+.confirm .rsvp {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #b49137;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.confirm h2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #666;
+  margin: 10px 0;
+  padding: 0px;
+}
+
+.formulario-confirmacion {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario-confirmacion .color-label {
+  display: block;
+  margin: 15px 0 5px 20px;
+  text-align: left;
+
+  font-size: 12px;
+  font-weight: 700;
+  color: #b49137;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formulario-confirmacion .radio {
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  gap: 40px; /* Espacio entre opciones */
+}
+
+.formulario-confirmacion .radio label {
+  display: flex;
+  align-items: center; /* Alinea el texto verticalmente al centro del botón */
+  gap: 10px; /* Espacio entre el botón y el texto */
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.formulario-confirmacion .radio input {
+  margin: 0; /* Quita el margen predeterminado del botón */
+}
+
+/* Ocultar el botón de radio original */
+.formulario-confirmacion .radio input[type='radio'] {
+  display: none;
+}
+
+/* Estilo del botón de radio personalizado */
+.formulario-confirmacion .radio label {
+  position: relative;
+  padding-left: 25px; /* Espacio para el círculo */
+  cursor: pointer;
+}
+
+.formulario-confirmacion .radio label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px; /* Tamaño del círculo */
+  height: 14px;
+  border: 1.5px solid #ccc; /* Color del borde cuando no está seleccionado */
+  border-radius: 50%;
+  background-color: white; /* Fondo */
+  transition: all 0.3s ease; /* Suaviza el cambio */
+}
+
+/* Estilo cuando el botón está seleccionado */
+.formulario-confirmacion .radio input[type='radio']:checked + label:before {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  background-color: #b49137; /* Fondo del botón seleccionado */
+}
+
+/* Texto del botón alineado correctamente */
+.formulario-confirmacion .radio label span {
+  margin-left: 5px;
+}
+
+.formulario-confirmacion input,
+.formulario-confirmacion select,
+.formulario-confirmacion textarea {
+  width: calc(100% - 40px); /* Ajusta el ancho para respetar el padding */
+  padding: 10px;
+  margin: 0 auto 15px auto; /* Centra y añade margen uniforme */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Incluye padding dentro del ancho total */
+}
+
+/* Establecer el color de las opciones del select */
+.formulario-confirmacion select {
+  color: #666; /* El mismo color que el placeholder de los inputs */
+}
+
+/* Establecer el color del placeholder en los inputs */
+.formulario-confirmacion input::placeholder,
+.formulario-confirmacion textarea::placeholder {
+  color: #666; /* El color de los placeholders */
+}
+
+.formulario-confirmacion button {
+  background-color: #b49137;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.5s ease-in-out;
+}
+.formulario-confirmacion button:hover {
+  background-color: #e8ac13cc;
+}

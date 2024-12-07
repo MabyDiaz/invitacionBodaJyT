@@ -1,0 +1,64 @@
+.nuestra-historia {
+  padding: 100px 20px;
+  background-image: url('../img/jyt4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nuestra-historia h2 {
+  font-family: 'Old Standard TT', serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #666666;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.nuestra-historia h2::after {
+  content: '';
+  position: absolute;
+  bottom: -9px; /* Ajusta la distancia vertical de la línea */
+  left: 35%; /* Inicia en el 25% del ancho del título */
+  width: 30%; /* La línea ocupa el 50% del ancho del título */
+  height: 2.5px; /* Grosor de la línea */
+  background-color: #e0b13acc; /* Color de la línea */
+}
+
+.nuestra-historia .content {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.65
+  ); /* Fondo blanco semi-transparente */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.nuestra-historia p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.nuestra-historia p:first-of-type::first-letter {
+  font-size: 28px;
+  font-weight: bold;
+  color: #666666;
+}
+
+.nuestra-historia p:last-of-type::after {
+  content: '❤️';
+  font-size: 24px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
