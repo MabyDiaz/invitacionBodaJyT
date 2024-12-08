@@ -44,7 +44,7 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  top: 15%;
+  top: 65%;
   left: 50%;
   margin-left: -75px;
   cursor: pointer;
@@ -61,4 +61,42 @@
 
 .intro .top .badge img {
   width: 100%;
+}
+
+.hiddenL {
+  display: none;
+}
+
+/* Imagen para móvil */
+@media screen and (max-width: 1124px) {
+  .hiddenM {
+    display: none;
+  }
+
+  .hiddenL {
+    display: block; /* Muestra la imagen para móvil */
+  }
+
+  .intro .top .badge {
+    top: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro .top .badge {
+    top: 60%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hiddenM {
+    display: none;
+  }
+  .hiddenL {
+    display: block;
+  }
+
+  .intro .top .badge {
+    top: 68%;
+  }
 }

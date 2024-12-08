@@ -51,7 +51,7 @@
     0px 0px 0px 20px rgba(0, 0, 0, 0.8), 2px 2px 2px 30px rgba(0, 0, 0, 0.8);
   display: inline-block; /* Ajusta el ancho al contenido */
   padding: 0 15px;
-  position: relative; /* Necesario para usar pseudo-elementos */
+  position: relative;
 }
 
 /* Usando pseudo-elementos para más control */
@@ -71,4 +71,20 @@
 
 .texto-portada h2::after {
   bottom: -8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .texto-portada h1 {
+    font-size: 5rem;
+  }
+
+  .texto-portada h2 {
+    font-size: 1.9rem;
+    padding: 0 9px;
+  }
+
+  .texto-portada h2::before,
+  .texto-portada h2::after {
+    height: 2px;
+  }
 }
