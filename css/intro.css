@@ -96,14 +96,15 @@
   .intro .top .badge {
     width: 180px;
     height: 180px;
-    top: 55%;
-    margin-left: -90px;
+    top: 50%;
+    margin-left: -105px;
   }
 }
 
 @media (max-width: 785px) {
   .intro .top .badge {
-    top: 65%;
-    margin-left: -100px;
+    top: 60%;
+    left: 100%;
+    margin-left: -280px;
   }
 }
