@@ -95,7 +95,7 @@
 
   .intro .top .badge {
     top: 63%;
-    margin-left: -120px;
+    margin-left: -100px;
   }
 
   .intro .top {
@@ -105,6 +105,6 @@
 
   .intro .bottom {
     bottom: 90px;
-    left: -110px;
+    left: -100px;
   }
 }
