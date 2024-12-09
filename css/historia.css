@@ -23,8 +23,8 @@
   bottom: -9px; /* Ajusta la distancia vertical de la línea */
   left: 35%; /* Inicia en el 25% del ancho del título */
   width: 30%; /* La línea ocupa el 50% del ancho del título */
-  height: 2.5px; /* Grosor de la línea */
-  background-color: #e0b13acc; /* Color de la línea */
+  height: 2.5px;
+  background-color: #e0b13acc;
 }
 
 .nuestra-historia .content {
@@ -51,14 +51,34 @@
 }
 
 .nuestra-historia p:first-of-type::first-letter {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   color: #666666;
 }
 
 .nuestra-historia p:last-of-type::after {
   content: '❤️';
-  font-size: 24px;
+  font-size: 12px;
   margin-left: 8px;
   vertical-align: middle;
+}
+
+@media (max-width: 420px) {
+  .nuestra-historia {
+    background-image: url('../img/jyt1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .nuestra-historia h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .nuestra-historia p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    margin: 20px auto;
+  }
 }

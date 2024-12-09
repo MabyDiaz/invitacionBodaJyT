@@ -12,7 +12,8 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 0px;
   color: #e0b13acc;
 }
 
@@ -34,6 +35,7 @@
   color: #666666;
   background-color: #00000017;
   padding: 10px 20px;
+  margin-bottom: 25px;
   border: none;
   border-radius: 40px;
   transition: 0.3s ease;
@@ -90,6 +92,10 @@
 }
 
 @media (max-width: 412px) {
+  .save-the-date h2 {
+    margin-top: 0px;
+  }
+
   .save-the-date .fecha {
     font-size: 1.6rem;
   }
@@ -106,6 +112,7 @@
   .btn-fecha {
     font-size: 0.7rem;
     padding: 8px 15px;
+    margin-bottom: -10px;
   }
 
   .btn-fecha i {

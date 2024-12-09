@@ -8,33 +8,34 @@
   border-bottom: 1px solid rgba(135, 135, 135, 0.2);
 }
 
-.interactivos div {
+.interactivos .item {
   width: 350px;
-  min-height: 300px;
+  height: 290px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 16px;
   background-color: #fdfdfd;
-  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
   padding: 20px;
 }
 
-.interactivos div i {
+.interactivos .item i {
   font-size: 48px;
   color: #e0b13acc;
 }
 
-.interactivos div h2 {
+.interactivos .item h2 {
   font-family: 'Old Standard TT', serif;
   font-size: 36px;
   font-weight: 200;
-  color: #333;
+  color: #666;
   margin: 20px 0px 0px 10px;
 }
 
-.interactivos div p {
+.interactivos .item p {
   font-size: 16px;
   line-height: 1.5;
   color: #666;
@@ -42,13 +43,14 @@
   max-width: 280px;
 }
 
-.interactivos div a {
-  font-size: 0.9rem;
+.interactivos .item a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.3333px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #666666;
-  background-color: #0000001d;
+  background-color: #00000017;
   padding: 10px 20px;
   border: none;
   border-radius: 40px;
@@ -57,7 +59,35 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.interactivos div a:hover {
+.interactivos .item a:hover {
   background-color: #e0b13acc;
   color: #fff;
+}
+
+@media (max-width: 420px) {
+  .interactivos {
+    flex-direction: column;
+  }
+
+  .interactivos .item {
+    width: 260px;
+    height: 260px;
+  }
+
+  .interactivos .item i {
+    font-size: 38px;
+  }
+
+  .interactivos .item h2 {
+    font-size: 30px;
+  }
+
+  .interactivos .item p {
+    font-size: 14px;
+  }
+
+  .interactivos .item a {
+    font-size: 0.7rem;
+    padding: 8px 15px;
+  }
 }
