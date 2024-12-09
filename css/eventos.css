@@ -1,8 +1,12 @@
 .events {
   width: 100%;
   padding: 120px 0px;
+  background-image: url('../img/fondo-regalos1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 24px;
   border-bottom: 1px solid rgba(135, 135, 135, 0.2);
 }
@@ -10,6 +14,10 @@
 .events .item {
   width: 350px;
   height: 380px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +32,7 @@
 }
 
 .events .item h2 {
+  color: #333;
   font-family: 'Old Standard TT', serif;
   font-size: 36px;
   font-weight: 200;
@@ -36,12 +45,13 @@
 
 .events .item .cta {
   margin-top: auto;
-  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.3333px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #666666;
-  background-color: #0000001d;
+  background-color: #00000017;
   padding: 10px 20px;
   border: none;
   border-radius: 40px;
@@ -52,4 +62,42 @@
   background-color: #e0b13acc;
   color: #fff;
   transition: 0.3s ease;
+}
+
+@media (max-width: 412px) {
+  .events {
+    flex-direction: column;
+  }
+
+  .events .item {
+    width: 290px;
+    height: 300px;
+    gap: 10px;
+  }
+
+  .events .item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .events .item h2 {
+    font-size: 30px;
+  }
+
+  .events .item .details {
+    min-height: 30px;
+  }
+
+  .events .item .details p {
+    font-size: 14px;
+  }
+
+  .events .item .details p .titulo {
+    margin-top: 0;
+  }
+
+  .events .item .cta {
+    font-size: 0.7rem;
+    padding: 8px 15px;
+  }
 }
