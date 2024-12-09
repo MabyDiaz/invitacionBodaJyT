@@ -93,14 +93,17 @@
 }
 
 @media (max-width: 420px) {
-  /* .intro .top .hiddenM {
-    top: 0px;
-  } */
-
   .intro .top .badge {
     width: 180px;
     height: 180px;
     top: 55%;
     margin-left: -90px;
+  }
+}
+
+@media (max-width: 785px) {
+  .intro .top .badge {
+    top: 65%;
+    margin-left: -100px;
   }
 }
