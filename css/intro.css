@@ -72,13 +72,13 @@
 }
 
 /* Imagen para móvil */
-@media screen and (max-width: 1124px) {
-  .hiddenM {
+@media (max-width: 1124px) {
+  .intro .top .hiddenM {
     display: none;
   }
 
-  .hiddenL {
-    display: block; /* Muestra la imagen para móvil */
+  .intro .top .hiddenL {
+    display: block;
   }
 
   .intro .top .badge {
@@ -86,17 +86,21 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .intro .top .badge {
     top: 60%;
   }
 }
 
 @media (max-width: 420px) {
+  /* .intro .top .hiddenM {
+    top: 0px;
+  } */
+
   .intro .top .badge {
     width: 180px;
     height: 180px;
-    top: 43%;
+    top: 55%;
     margin-left: -90px;
   }
 }
