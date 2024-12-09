@@ -224,3 +224,7 @@
 .formulario-confirmacion button:hover {
   background-color: #e8ac13cc;
 }
+
+@media (max-width: 420px) {
+  
+}
