@@ -89,22 +89,18 @@
 }
 
 @media (max-width: 375px) {
-  .hiddenL {
-    display: block; /* Muestra la imagen para móvil */
-  }
-
   .intro .top .badge {
     top: 63%;
-    margin-left: -100px;
+    margin-left: -60px;
   }
 
   .intro .top {
     top: 0px;
-    left: -60px;
+    left: 0px;
   }
 
   .intro .bottom {
     bottom: 90px;
-    left: -100px;
+    left: 0px;
   }
 }
