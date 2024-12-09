@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //------------------------------------------------------------------------
 // Cuenta regresiva
 const countdown = document.getElementById('countdown');
-const targetDate = new Date('2024-12-15T19:00:00').getTime();
+const targetDate = new Date('2025-12-15T19:00:00').getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();

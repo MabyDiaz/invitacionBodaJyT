@@ -73,7 +73,7 @@
   bottom: -8px;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .texto-portada h1 {
     font-size: 5rem;
   }
@@ -88,3 +88,16 @@
     height: 2px;
   }
 }
+
+@media (max-width: 412px) {
+  .texto-portada h1 {
+    font-size: 6rem;
+  }
+
+  .texto-portada h2 {
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.5rem;
+  }
+}
+
+

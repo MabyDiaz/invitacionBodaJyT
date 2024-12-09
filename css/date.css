@@ -32,7 +32,7 @@
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #666666;
-  background-color: #0000001d;
+  background-color: #00000017;
   padding: 10px 20px;
   border: none;
   border-radius: 40px;
@@ -42,7 +42,6 @@
 .btn-fecha:hover {
   background-color: #e0b13acc;
   color: #fff;
-  
 }
 
 .btn-fecha i {
@@ -88,4 +87,29 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   color: #666;
+}
+
+@media (max-width: 412px) {
+  .save-the-date .fecha {
+    font-size: 1.6rem;
+  }
+
+  .time-unit .number {
+    font-size: 2rem;
+    padding: 0px 10px;
+  }
+
+  .time-unit .label {
+    font-size: 0.6rem;
+  }
+
+  .btn-fecha {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 8px 15px;
+  }
+
+  .btn-fecha i {
+    font-size: 14px;
+  }
 }

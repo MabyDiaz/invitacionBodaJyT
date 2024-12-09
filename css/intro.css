@@ -88,10 +88,10 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 372px) {
   .intro .top .badge {
     top: 63%;
-    margin-left: -60px;
+    margin-left: -80px;
   }
 
   .intro .top {

@@ -81,7 +81,7 @@ body {
   font-weight: 700;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .player {
     right: 30px;
     width: 40px;
@@ -91,5 +91,24 @@ body {
   .player .icon {
     width: 35px;
     height: 35px;
+  }
+}
+
+@media (max-width: 412px) {
+  .player {
+    top: 10%;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .player .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .player .icon img {
+    width: 18px;
+    height: 18px;
   }
 }
