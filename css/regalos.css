@@ -24,7 +24,7 @@
   width: 70px;
   height: 70px;
   margin: 0 auto;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
 }
 
 .icono-regalo img {
@@ -213,6 +213,10 @@
     padding: 8px 15px;
   }
 
+  .modalGift {
+    top: 10%;
+  }
+
   .contenido-modal {
     padding: 30px;
     width: 80%;
@@ -236,7 +240,7 @@
   }
 
   .item .left .salon {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .item .right p {
