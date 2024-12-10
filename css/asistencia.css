@@ -272,4 +272,10 @@
   .confirm h2 {
     font-size: 30px;
   }
+
+  .formulario-confirmacion input,
+  .formulario-confirmacion select,
+  .formulario-confirmacion textarea {
+    margin: 0 auto 10px auto;
+  }
 }
