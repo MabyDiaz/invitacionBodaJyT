@@ -185,6 +185,11 @@
 }
 
 @media (max-width: 420px) {
+  .regalos {
+    background-size: contain; /* Asegura que la imagen esté completamente visible */
+    background-position: center; /* Centra la imagen en pantallas pequeñas */
+  }
+
   .regalos .content {
     padding: 15px;
     max-width: 290px;
