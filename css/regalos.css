@@ -213,9 +213,8 @@
     padding: 8px 15px;
   }
 
-  
-
   .contenido-modal {
+    top: 20%;
     padding: 30px;
     width: 80%;
     max-width: 280px;
