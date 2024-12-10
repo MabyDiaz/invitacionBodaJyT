@@ -186,8 +186,7 @@
 
 @media (max-width: 420px) {
   .regalos {
-    background-size: contain; /* Asegura que la imagen esté completamente visible */
-    background-position: center; /* Centra la imagen en pantallas pequeñas */
+    background-image: url('../img/fondo-regalos.jpg');
   }
 
   .regalos .content {

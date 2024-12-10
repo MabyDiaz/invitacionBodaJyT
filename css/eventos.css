@@ -68,6 +68,7 @@
 @media (max-width: 412px) {
   .events {
     flex-direction: column;
+    background-image: url('../img/fondo-regalos.jpg');
   }
 
   .events .item {
