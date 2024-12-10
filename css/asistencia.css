@@ -262,6 +262,7 @@
   }
 
   .confirm .contenido-modal {
+    top: 0;
     padding: 30px 15px;
     border-radius: 8px;
     width: 90%;
