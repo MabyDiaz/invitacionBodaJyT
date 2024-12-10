@@ -84,7 +84,6 @@ body {
 
 @media (max-width: 1024px) {
   .player {
-    right: 5px;
     width: 40px;
     height: 40px;
   }
@@ -98,6 +97,5 @@ body {
 @media (max-width: 412px) {
   .player {
     top: 10%;
-    right: 5px;
   }
 }
