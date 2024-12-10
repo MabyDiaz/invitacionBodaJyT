@@ -68,35 +68,6 @@
   transition: 0.3s ease;
 }
 
-/* Información oculta */
-.info-oculta {
-  display: none;
-  margin-top: 20px;
-  text-align: left;
-}
-
-/* Detalle */
-.detalle {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-/* Títulos en los detalles */
-.detalle h3 {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 5px;
-}
-
-/* Separador */
-hr {
-  border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 20px 0;
-}
-
 /* ----------------------------------------------------------------------------- */
 /* Modal */
 .modalGift {
@@ -184,12 +155,12 @@ hr {
 
 .item span {
   width: 30%;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #666666;
-  background-color: #0000001d;
+  background-color: #00000017;
   padding: 10px 20px;
   margin-top: 10px;
   border: none;
@@ -235,5 +206,52 @@ hr {
   .btn-mas-info {
     font-size: 0.7rem;
     padding: 8px 15px;
+  }
+
+  .contenido-modal {
+    padding: 30px;
+    width: 80%;
+    max-width: 280px;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item .rigth,
+  .item .left {
+    width: 100%;
+  }
+
+  .item .left h3 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .item .right p {
+    font-size: 12px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .item span {
+    width: 50%;
+    font-size: 0.6rem;
+    margin: 10px auto;
+  }
+
+  .item span i {
+    font-size: 0.6rem;
+  }
+
+  .item .right .cbu {
+    margin: 10px auto 3px;
+  }
+
+  .item input {
+    text-align: center;
+    margin: 0 auto;
   }
 }

@@ -2,6 +2,9 @@
   width: 100%;
   padding: 120px 0px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .confirmation span {
@@ -30,11 +33,13 @@
 }
 
 .confirmation .link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.3333px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #666666;
-  background-color: #0000001d;
+  background-color: #00000017;
   padding: 10px 20px;
   border: none;
   border-radius: 40px;
@@ -226,5 +231,29 @@
 }
 
 @media (max-width: 420px) {
-  
+  .confirmation-content {
+    width: 280px;
+    height: 250px;
+  }
+
+  .confirmation svg {
+    width: 50px;
+    height: 50px;
+  }
+  .confirmation h2 {
+    font-size: 30px;
+  }
+
+  .confirmation p {
+    font-size: 14px;
+  }
+
+  .confirmation .link {
+    font-size: 0.7rem;
+    padding: 8px 15px;
+  }
+
+  .confirmation .link i {
+    font-size: 14px;
+  }
 }
