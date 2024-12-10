@@ -233,16 +233,16 @@
   .item .left h3 {
     text-align: center;
     font-size: 1.2rem;
+    margin-top: 10px;
   }
 
   .item .right p {
     font-size: 12px;
     margin: 10px auto;
-    text-align: center;
   }
 
   .item span {
-    width: 50%;
+    width: 80%;
     font-size: 0.6rem;
     margin: 10px auto;
   }
@@ -256,7 +256,6 @@
   }
 
   .item input {
-    text-align: center;
     margin: 0 auto;
   }
 }
