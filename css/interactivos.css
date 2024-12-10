@@ -7,7 +7,10 @@
   gap: 24px;
   border-bottom: 1px solid rgba(135, 135, 135, 0.2);
   overflow: hidden;
-  background-color: #f5f1e6;
+
+  background-image: url('../img/fondo-regalos1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .interactivos .item {
@@ -69,6 +72,7 @@
 @media (max-width: 420px) {
   .interactivos {
     flex-direction: column;
+    background-image: url('../img/fondo-regalos.jpg');
   }
 
   .interactivos .item {
