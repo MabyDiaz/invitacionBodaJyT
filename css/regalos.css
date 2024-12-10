@@ -233,12 +233,18 @@
   .item .left h3 {
     text-align: center;
     font-size: 1.2rem;
+  }
+
+  .item .left .salon {
     margin-top: 10px;
   }
 
   .item .right p {
     font-size: 12px;
     margin: 10px 0;
+  }
+
+  .item .right .urna {
     text-align: center;
   }
 
