@@ -103,5 +103,6 @@ body {
 @media (max-width: 412px) {
   .player {
     top: 10%;
+    right: 5px;
   }
 }
