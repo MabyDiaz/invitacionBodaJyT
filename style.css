@@ -97,6 +97,6 @@ body {
 @media (max-width: 412px) {
   .player {
     top: 10%;
-    right: 20px;
+    right: 30px;
   }
 }
