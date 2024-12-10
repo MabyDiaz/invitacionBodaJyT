@@ -238,13 +238,13 @@
 
   .item .right p {
     font-size: 12px;
-    margin: 10px auto;
+    margin: 10px 0;
   }
 
   .item span {
-    width: 80%;
+    width: 100%;
     font-size: 0.6rem;
-    margin: 10px auto;
+    margin: 10px 0px;
   }
 
   .item span i {
@@ -252,10 +252,10 @@
   }
 
   .item .right .cbu {
-    margin: 10px auto 3px;
+    margin: 10px 0px 3px;
   }
 
   .item input {
-    margin: 0 auto;
+    margin: 0px;
   }
 }
