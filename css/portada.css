@@ -76,11 +76,13 @@
 @media (max-width: 1024px) {
   .texto-portada h1 {
     font-size: 5rem;
+    overflow-wrap: break-word;
   }
 
   .texto-portada h2 {
     font-size: 1.9rem;
     padding: 0 9px;
+    overflow-wrap: break-word;
   }
 
   .texto-portada h2::before,
@@ -99,5 +101,3 @@
     font-size: 1.5rem;
   }
 }
-
-

@@ -13,6 +13,12 @@
 @import './css/intro.css';
 
 /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: #333;
