@@ -256,4 +256,14 @@
   .confirmation .link i {
     font-size: 14px;
   }
+
+  .confirm .contenido-modal {
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 80%;
+  }
+
+  .confirm h2 {
+    font-size: 30px;
+  }
 }
