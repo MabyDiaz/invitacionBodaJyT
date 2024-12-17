@@ -49,28 +49,11 @@
   color: #fff;
   text-shadow: 8px 8px 8px 10px rgba(0, 0, 0, 0.8),
     0px 0px 0px 20px rgba(0, 0, 0, 0.8), 2px 2px 2px 30px rgba(0, 0, 0, 0.8);
-  display: inline-block; /* Ajusta el ancho al contenido */
-  padding: 0 15px;
+  border-top: 3px solid #e0b13acc;
+  border-bottom: 3px solid #e0b13acc;
+  display: inline-block;
+  padding: 3px 0px;
   position: relative;
-}
-
-/* Usando pseudo-elementos para más control */
-.texto-portada h2::before,
-.texto-portada h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: #e0b13acc;
-}
-
-.texto-portada h2::before {
-  top: -8px;
-}
-
-.texto-portada h2::after {
-  bottom: -8px;
 }
 
 @media (max-width: 1024px) {
@@ -81,13 +64,9 @@
 
   .texto-portada h2 {
     font-size: 1.9rem;
-    padding: 0 9px;
+    border-top: 2px solid #e0b13acc;
+    border-bottom: 2px solid #e0b13acc;
     overflow-wrap: break-word;
-  }
-
-  .texto-portada h2::before,
-  .texto-portada h2::after {
-    height: 2px;
   }
 }
 
