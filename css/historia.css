@@ -3,6 +3,7 @@
   background-image: url('../img/jyt4.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
