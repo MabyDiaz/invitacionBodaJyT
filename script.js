@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Opcional: Evita el scroll mientras está cerrada
     body.style.overflow = 'auto';
+
+    const audio = document.getElementById('player');
+    audio.play().catch((error) => {
+      console.warn('Error al intentar reproducir el audio:', error);
+    });
+
+    const button = document.getElementById('button');
+    button.innerHTML =
+      "<div class='icon'><img src='./img/play.gif' alt='Play Icon'/></div>";
   });
 
   //------------------------------------------------------------------------
