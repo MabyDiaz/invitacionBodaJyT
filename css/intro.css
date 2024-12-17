@@ -1,110 +1,45 @@
-.intro {
-  width: 100%;
-  height: 100%;
+/* Estilo inicial de la cortina */
+.cortina {
   position: fixed;
   top: 0;
-  z-index: 3000;
-}
-
-.intro img {
+  left: 0;
   width: 100%;
-  position: absolute;
-  top: 0;
-}
-
-.intro .up {
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: all 0.8s ease-out;
-}
-
-.intro .down {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: all 1s ease-out;
-}
-
-.intro .bottom {
   height: 100%;
-  width: 100%;
-  z-index: 999;
+  background-image: url('../img/fondo-intro.jpg');
   background-size: cover;
-  background-position: top;
-  position: absolute;
-  bottom: 0;
-  background-image: url('../img/envelopeb1.png');
-}
-
-.intro .top {
-  z-index: 3100;
-  position: relative;
-}
-
-.intro .top .hiddenM {
-  top: -130px;
-}
-
-.intro .top .badge {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  margin-left: -80px;
-  cursor: pointer;
-  z-index: 3200;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: all 0.3s ease-out;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 1.5s ease-in-out;
 }
 
-.intro .top .badge:hover {
-  transform: scale(110%);
+.cortina img {
+  width: 350px;
+  height: 350px;
 }
 
-.intro .top .badge img {
-  width: 100%;
+/* Animación para abrir la cortina */
+.cortina.abrir-cortina {
+  transform: translateY(-100%);
 }
 
-.hiddenL {
-  display: none;
-}
-
-/* Imagen para móvil */
 @media (max-width: 1124px) {
-  .intro .top .hiddenM {
-    display: none;
-  }
+}
 
-  .intro .top .hiddenL {
-    display: block;
-  }
-
-  .intro .top .badge {
-    top: 75%;
+@media (max-width: 785px) {
+  .cortina img {
+    width: 180px;
+    height: 180px;
   }
 }
 
 @media (max-width: 768px) {
-  .intro .top .badge {
-    top: 60%;
-  }
 }
 
 @media (max-width: 420px) {
-  .intro .top .badge {
-    width: 180px;
-    height: 180px;
-    top: 50%;
-    margin-left: -105px;
-  }
-}
-
-@media (max-width: 785px) {
-  .intro .top .badge {
-    top: 60%;
-    left: 100%;
-    margin-left: -280px;
-  }
 }

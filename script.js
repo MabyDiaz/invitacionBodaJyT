@@ -1,25 +1,18 @@
 /* Intro */
-function animar() {
-  document.body.style.overflow = 'auto';
-  document.getElementById('top').classList.add('up');
-  document.getElementById('bottom').classList.add('down');
-  setTimeout(() => {
-    document.getElementById('intro').style.display = 'none';
-  }, 1000);
+document.addEventListener('DOMContentLoaded', function () {
+  const cortina = document.getElementById('cortina');
+  const body = document.querySelector('body');
 
-  const audio = document.getElementById('player');
-  audio.play().catch((error) => {
-    console.warn('Error al intentar reproducir el audio:', error);
+  cortina.addEventListener('click', function () {
+    // Agrega una clase para la animación de apertura
+    cortina.classList.add('abrir-cortina');
+
+    // Opcional: Evita el scroll mientras está cerrada
+    body.style.overflow = 'auto';
   });
 
-  const button = document.getElementById('button');
-  button.innerHTML =
-    "<div class='icon'><img src='./img/play.gif' alt='Play Icon'/></div>";
-}
-
-//------------------------------------------------------------------------
-/* Portada*/
-document.addEventListener('DOMContentLoaded', () => {
+  //------------------------------------------------------------------------
+  /* Portada*/
   const images = document.querySelectorAll('.fotos-portada img');
   const audio = document.getElementById('player');
   const button = document.getElementById('button');
