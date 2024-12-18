@@ -74,129 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // document
-  //   .getElementById('confirmForm')
-  //   .addEventListener('submit', function (e) {
-  //     e.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
-  //     // Obtener los valores del formulario
-  //     const nombre = document.getElementById('nombre').value.trim();
-  //     const asistencia = document.querySelector(
-  //       'input[name="asistencia"]:checked'
-  //     ).value;
-  //     const menu = document.querySelector('select[name="menu"]').value;
-  //     const acompanantes = document
-  //       .querySelector('input[name="acompanantes"]')
-  //       .value.trim();
-  //     const comentarios = document
-  //       .querySelector('textarea[name="comentarios"]')
-  //       .value.trim();
-
-  //     // Crear los datos a enviar a Google Sheets
-  //     const datosFormulario = {
-  //       asistencia: asistencia,
-  //       nombre: nombre,
-  //       menu: menu,
-  //       acompanantes: acompanantes,
-  //       comentarios: comentarios,
-  //     };
-
-  //     // URL del webhook de Google Apps Script
-  //     const urlGoogleSheets =
-  //       'https://script.google.com/macros/s/AKfycbyRYUkuYvJKJ4x4yrATrXaXLRBXyNkaQFOIyAft2TBfXr7sGBdeHDsWo2SUKIJT0Upz/exec'; // Reemplaza con tu URL
-
-  //     // Enviar los datos a Google Sheets
-  //     fetch(urlGoogleSheets, {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(datosFormulario),
-  //     })
-  //       .then((response) => {
-  //         if (response.ok) {
-  //           // Generar el mensaje para WhatsApp
-  //           const numeroNovia = '5493513106413'; // Reemplaza con el número de la novia (sin +)
-  //           const mensajeWhatsApp =
-  //             asistencia === 'si'
-  //               ? `Hola, soy ${nombre}. Confirmo que asistiré al evento.`
-  //               : `Hola, soy ${nombre}. Lamentablemente no podré asistir al evento.`;
-  //           const urlWhatsApp = `https://wa.me/${numeroNovia}?text=${encodeURIComponent(
-  //             mensajeWhatsApp
-  //           )}`;
-
-  //           // Redirigir al enlace de WhatsApp
-  //           window.open(urlWhatsApp, '_blank');
-
-  //           // Confirmar al usuario
-  //           alert('Tu respuesta ha sido enviada correctamente.');
-  //         } else {
-  //           throw new Error('Error al enviar los datos a Google Sheets.');
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         console.error('Error:', error);
-  //         alert(
-  //           'Ocurrió un error al enviar los datos. Por favor, inténtalo de nuevo.'
-  //         );
-  //       });
-  //   });
-
-  document
-    .getElementById('confirmForm')
-    .addEventListener('submit', function (e) {
-      e.preventDefault(); // Evitar que el formulario se envíe automáticamente
-
-      // Obtener los valores del formulario
-      const nombre = document.getElementById('nombre').value.trim();
-      const asistencia = document.querySelector(
-        'input[name="asistencia"]:checked'
-      ).value;
-      const menu = document.querySelector('select[name="menu"]').value;
-      const acompanantes = document
-        .querySelector('input[name="acompanantes"]')
-        .value.trim();
-      const comentarios = document
-        .querySelector('textarea[name="comentarios"]')
-        .value.trim();
-
-      // Crear los datos a enviar a Google Sheets
-      const datosFormulario = {
-        asistencia: asistencia,
-        nombre: nombre,
-        menu: menu,
-        acompanantes: acompanantes,
-        comentarios: comentarios,
-      };
-
-      // URL del webhook de Google Apps Script
-      const urlGoogleSheets =
-        'https://script.google.com/macros/s/AKfycbyRYUkuYvJKJ4x4yrATrXaXLRBXyNkaQFOIyAft2TBfXr7sGBdeHDsWo2SUKIJT0Upz/exec'; // Reemplaza con tu URL
-
-      // Enviar los datos a Google Sheets
-      fetch(urlGoogleSheets, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(datosFormulario),
-      })
-        .then((response) => {
-          if (response.ok) {
-            // Confirmar al usuario
-            alert('Tu respuesta ha sido enviada correctamente.');
-          } else {
-            console.error(
-              'Error al enviar los datos a Google Sheets:',
-              response
-            );
-            throw new Error('Error al enviar los datos a Google Sheets.');
-          }
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-          alert(
-            'Ocurrió un error al enviar los datos. Por favor, inténtalo de nuevo.'
-          );
-        });
-    });
-
   //------------------------------------------------------------------------
   // Cuenta regresiva
   const countdown = document.getElementById('countdown');
@@ -256,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let slideIndex = 1;
 
   /* Abre el modal */
-  function openModal1() {
+  function openModal() {
     document.getElementById('myModal').style.display = 'flex';
     showSlides(slideIndex);
   }
