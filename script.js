@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let slideIndex = 1;
 
   /* Abre el modal */
-  function openModal() {
+  function openModal1() {
     document.getElementById('myModal').style.display = 'flex';
     showSlides(slideIndex);
   }
