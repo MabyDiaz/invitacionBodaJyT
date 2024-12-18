@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/1977d5c537.js" crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <link rel="stylesheet"
@@ -255,7 +255,7 @@
                 <span class="closeModalConfirm">&times;</span>
                 <span class="rsvp">rsvp</span>
                 <h2>Confirmación de Asistencia</h2>
-                <form method="POST" class="formulario-confirmacion" id="confirmForm">
+                <form action="https://formspree.io/f/mnqrlxyz" method="POST" class="formulario-confirmacion">
                     <div class="radio">
                         <input type="radio" id="asistire" name="asistencia" value="si" checked>
                         <label for="asistire">Asistiré</label>
@@ -264,7 +264,7 @@
                         <label for="no_asistire">No Asistiré</label>
                     </div>
                     <label class="color-label">Apellido y Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
                     <label class="color-label">¿Necesitas un menú especial?</label>
                     <select name="menu">
                         <option value="ninguno">Ninguno</option>

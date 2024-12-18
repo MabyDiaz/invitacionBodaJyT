@@ -9,15 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Opcional: Evita el scroll mientras está cerrada
     body.style.overflow = 'auto';
-
-    const audio = document.getElementById('player');
-    audio.play().catch((error) => {
-      console.warn('Error al intentar reproducir el audio:', error);
-    });
-
-    const button = document.getElementById('button');
-    button.innerHTML =
-      "<div class='icon'><img src='./img/play.gif' alt='Play Icon'/></div>";
   });
 
   //------------------------------------------------------------------------
@@ -73,29 +64,30 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = 'none';
     }
   });
+});
 
-  //------------------------------------------------------------------------
-  // Cuenta regresiva
-  const countdown = document.getElementById('countdown');
-  const targetDate = new Date('2025-12-15T19:30:00').getTime();
+//------------------------------------------------------------------------
+// Cuenta regresiva
+const countdown = document.getElementById('countdown');
+const targetDate = new Date('2025-12-15T19:30:00').getTime();
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const difference = targetDate - now;
+function updateCountdown() {
+  const now = new Date().getTime();
+  const difference = targetDate - now;
 
-    if (difference < 0) {
-      countdown.innerHTML = '<p>¡Es hoy!</p>';
-      return;
-    }
+  if (difference < 0) {
+    countdown.innerHTML = '<p>¡Es hoy!</p>';
+    return;
+  }
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    countdown.innerHTML = `
+  countdown.innerHTML = `
     <div class="time">
       <div class="time-unit">
         <span class="number">${days}</span>
@@ -115,84 +107,83 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     </div>
   `;
+}
+
+setInterval(updateCountdown, 1000);
+
+//------------------------------------------------------------------------
+// Agregar al calendario
+function addToCalendar() {
+  window.open(
+    'https://calendar.google.com/calendar/u/0/r/eventedit?...',
+    '_blank'
+  );
+}
+
+//------------------------------------------------------------------------
+// Album de Fotos
+let slideIndex = 1;
+
+/* Abre el modal */
+function openModal() {
+  document.getElementById('myModal').style.display = 'flex';
+  showSlides(slideIndex);
+}
+
+/* Cierra el modal */
+function closeModal() {
+  document.getElementById('myModal').style.display = 'none';
+  slideIndex = 1; // Opcional: reinicia el índice al cerrar
+}
+
+/* Cambia de imagen */
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+/* Muestra la imagen actual */
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName('mySlides');
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  for (let slide of slides) {
+    slide.style.display = 'none'; // Oculta todas las imágenes inicialmente
   }
 
-  setInterval(updateCountdown, 1000);
+  slides[slideIndex - 1].style.display = 'block'; // Muestra solo la imagen actual
+}
 
-  //------------------------------------------------------------------------
-  // Agregar al calendario
-  function addToCalendar() {
-    window.open(
-      'https://calendar.google.com/calendar/u/0/r/eventedit?...',
-      '_blank'
-    );
-  }
+//------------------------------------------------------------------------
+// Regalos
+// Función para mostrar el modal
+function mostrarModal() {
+  const modal = document.getElementById('modalRegalo');
+  modal.style.display = 'block';
+}
 
-  //------------------------------------------------------------------------
-  // Album de Fotos
-  let slideIndex = 1;
+// Función para cerrar el modal
+function cerrarModal() {
+  const modal = document.getElementById('modalRegalo');
+  modal.style.display = 'none';
+}
 
-  /* Abre el modal */
-  function openModal1() {
-    document.getElementById('myModal').style.display = 'flex';
-    showSlides(slideIndex);
-  }
-
-  /* Cierra el modal */
-  function closeModal() {
-    document.getElementById('myModal').style.display = 'none';
-    slideIndex = 1; // Opcional: reinicia el índice al cerrar
-  }
-
-  /* Cambia de imagen */
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
-  }
-
-  /* Muestra la imagen actual */
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  function showSlides(n) {
-    let slides = document.getElementsByClassName('mySlides');
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
-
-    for (let slide of slides) {
-      slide.style.display = 'none'; // Oculta todas las imágenes inicialmente
-    }
-
-    slides[slideIndex - 1].style.display = 'block'; // Muestra solo la imagen actual
-  }
-
-  //------------------------------------------------------------------------
-  // Regalos
-  // Función para mostrar el modal
-  function mostrarModal() {
-    const modal = document.getElementById('modalRegalo');
-    modal.style.display = 'block';
-  }
-
-  // Función para cerrar el modal
-  function cerrarModal() {
-    const modal = document.getElementById('modalRegalo');
-    modal.style.display = 'none';
-  }
-
-  // Cerrar modal al hacer clic fuera de él
-  const modalRegalo = document.getElementById('modalRegalo');
-  window.addEventListener('click', (e) => {
-    if (e.target === modalRegalo) {
-      modalRegalo.style.display = 'none';
-    }
-  });
-
-  // Función para copiar el CBU desde el modal
-  function copiarCBUModal() {
-    const cbuInput = document.getElementById('GfGInput');
-    navigator.clipboard.writeText(cbuInput.value).then(() => {
-      alert('CBU copiado al portapapeles.');
-    });
+// Cerrar modal al hacer clic fuera de él
+const modalRegalo = document.getElementById('modalRegalo');
+window.addEventListener('click', (e) => {
+  if (e.target === modalRegalo) {
+    modalRegalo.style.display = 'none';
   }
 });
+
+// Función para copiar el CBU desde el modal
+function copiarCBUModal() {
+  const cbuInput = document.getElementById('GfGInput');
+  navigator.clipboard.writeText(cbuInput.value).then(() => {
+    alert('CBU copiado al portapapeles.');
+  });
+}
