@@ -73,94 +73,95 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = 'none';
     }
   });
-});
 
-document.getElementById('confirmForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // Evitar que el formulario se envíe automáticamente
+  document
+    .getElementById('confirmForm')
+    .addEventListener('submit', function (e) {
+      e.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
-  // Obtener los valores del formulario
-  const nombre = document.getElementById('nombre').value.trim();
-  const asistencia = document.querySelector(
-    'input[name="asistencia"]:checked'
-  ).value;
-  const menu = document.querySelector('select[name="menu"]').value;
-  const acompanantes = document
-    .querySelector('input[name="acompanantes"]')
-    .value.trim();
-  const comentarios = document
-    .querySelector('textarea[name="comentarios"]')
-    .value.trim();
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value.trim();
+      const asistencia = document.querySelector(
+        'input[name="asistencia"]:checked'
+      ).value;
+      const menu = document.querySelector('select[name="menu"]').value;
+      const acompanantes = document
+        .querySelector('input[name="acompanantes"]')
+        .value.trim();
+      const comentarios = document
+        .querySelector('textarea[name="comentarios"]')
+        .value.trim();
 
-  // Crear los datos a enviar a Google Sheets
-  const datosFormulario = {
-    asistencia: asistencia,
-    nombre: nombre,
-    menu: menu,
-    acompanantes: acompanantes,
-    comentarios: comentarios,
-  };
+      // Crear los datos a enviar a Google Sheets
+      const datosFormulario = {
+        asistencia: asistencia,
+        nombre: nombre,
+        menu: menu,
+        acompanantes: acompanantes,
+        comentarios: comentarios,
+      };
 
-  // URL del webhook de Google Apps Script
-  const urlGoogleSheets =
-    'https://script.google.com/macros/s/AKfycbxdrH79FmyaixKbAxP6sa8ygjsXPCB35cgroyt5HkoyKb7E2pFM7Qlk2fsBuqDy3M7v/exec'; // Reemplaza con tu URL
+      // URL del webhook de Google Apps Script
+      const urlGoogleSheets =
+        'https://script.google.com/macros/s/AKfycbxdrH79FmyaixKbAxP6sa8ygjsXPCB35cgroyt5HkoyKb7E2pFM7Qlk2fsBuqDy3M7v/exec'; // Reemplaza con tu URL
 
-  // Enviar los datos a Google Sheets
-  fetch(urlGoogleSheets, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(datosFormulario),
-  })
-    .then((response) => {
-      if (response.ok) {
-        // Generar el mensaje para WhatsApp
-        const numeroNovia = '5493513106413'; // Reemplaza con el número de la novia (sin +)
-        const mensajeWhatsApp =
-          asistencia === 'si'
-            ? `Hola, soy ${nombre}. Confirmo que asistiré al evento.`
-            : `Hola, soy ${nombre}. Lamentablemente no podré asistir al evento.`;
-        const urlWhatsApp = `https://wa.me/${numeroNovia}?text=${encodeURIComponent(
-          mensajeWhatsApp
-        )}`;
+      // Enviar los datos a Google Sheets
+      fetch(urlGoogleSheets, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(datosFormulario),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Generar el mensaje para WhatsApp
+            const numeroNovia = '5493513106413'; // Reemplaza con el número de la novia (sin +)
+            const mensajeWhatsApp =
+              asistencia === 'si'
+                ? `Hola, soy ${nombre}. Confirmo que asistiré al evento.`
+                : `Hola, soy ${nombre}. Lamentablemente no podré asistir al evento.`;
+            const urlWhatsApp = `https://wa.me/${numeroNovia}?text=${encodeURIComponent(
+              mensajeWhatsApp
+            )}`;
 
-        // Redirigir al enlace de WhatsApp
-        window.open(urlWhatsApp, '_blank');
+            // Redirigir al enlace de WhatsApp
+            window.open(urlWhatsApp, '_blank');
 
-        // Confirmar al usuario
-        alert('Tu respuesta ha sido enviada correctamente.');
-      } else {
-        throw new Error('Error al enviar los datos a Google Sheets.');
-      }
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert(
-        'Ocurrió un error al enviar los datos. Por favor, inténtalo de nuevo.'
-      );
+            // Confirmar al usuario
+            alert('Tu respuesta ha sido enviada correctamente.');
+          } else {
+            throw new Error('Error al enviar los datos a Google Sheets.');
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert(
+            'Ocurrió un error al enviar los datos. Por favor, inténtalo de nuevo.'
+          );
+        });
     });
-});
 
-//------------------------------------------------------------------------
-// Cuenta regresiva
-const countdown = document.getElementById('countdown');
-const targetDate = new Date('2025-12-15T19:30:00').getTime();
+  //------------------------------------------------------------------------
+  // Cuenta regresiva
+  const countdown = document.getElementById('countdown');
+  const targetDate = new Date('2025-12-15T19:30:00').getTime();
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const difference = targetDate - now;
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
 
-  if (difference < 0) {
-    countdown.innerHTML = '<p>¡Es hoy!</p>';
-    return;
-  }
+    if (difference < 0) {
+      countdown.innerHTML = '<p>¡Es hoy!</p>';
+      return;
+    }
 
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-  countdown.innerHTML = `
+    countdown.innerHTML = `
     <div class="time">
       <div class="time-unit">
         <span class="number">${days}</span>
@@ -180,83 +181,84 @@ function updateCountdown() {
       </div>
     </div>
   `;
-}
-
-setInterval(updateCountdown, 1000);
-
-//------------------------------------------------------------------------
-// Agregar al calendario
-function addToCalendar() {
-  window.open(
-    'https://calendar.google.com/calendar/u/0/r/eventedit?...',
-    '_blank'
-  );
-}
-
-//------------------------------------------------------------------------
-// Album de Fotos
-let slideIndex = 1;
-
-/* Abre el modal */
-function openModal() {
-  document.getElementById('myModal').style.display = 'flex';
-  showSlides(slideIndex);
-}
-
-/* Cierra el modal */
-function closeModal() {
-  document.getElementById('myModal').style.display = 'none';
-  slideIndex = 1; // Opcional: reinicia el índice al cerrar
-}
-
-/* Cambia de imagen */
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-/* Muestra la imagen actual */
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let slides = document.getElementsByClassName('mySlides');
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
-
-  for (let slide of slides) {
-    slide.style.display = 'none'; // Oculta todas las imágenes inicialmente
   }
 
-  slides[slideIndex - 1].style.display = 'block'; // Muestra solo la imagen actual
-}
+  setInterval(updateCountdown, 1000);
 
-//------------------------------------------------------------------------
-// Regalos
-// Función para mostrar el modal
-function mostrarModal() {
-  const modal = document.getElementById('modalRegalo');
-  modal.style.display = 'block';
-}
+  //------------------------------------------------------------------------
+  // Agregar al calendario
+  function addToCalendar() {
+    window.open(
+      'https://calendar.google.com/calendar/u/0/r/eventedit?...',
+      '_blank'
+    );
+  }
 
-// Función para cerrar el modal
-function cerrarModal() {
-  const modal = document.getElementById('modalRegalo');
-  modal.style.display = 'none';
-}
+  //------------------------------------------------------------------------
+  // Album de Fotos
+  let slideIndex = 1;
 
-// Cerrar modal al hacer clic fuera de él
-const modalRegalo = document.getElementById('modalRegalo');
-window.addEventListener('click', (e) => {
-  if (e.target === modalRegalo) {
-    modalRegalo.style.display = 'none';
+  /* Abre el modal */
+  function openModal() {
+    document.getElementById('myModal').style.display = 'flex';
+    showSlides(slideIndex);
+  }
+
+  /* Cierra el modal */
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+    slideIndex = 1; // Opcional: reinicia el índice al cerrar
+  }
+
+  /* Cambia de imagen */
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  /* Muestra la imagen actual */
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName('mySlides');
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (let slide of slides) {
+      slide.style.display = 'none'; // Oculta todas las imágenes inicialmente
+    }
+
+    slides[slideIndex - 1].style.display = 'block'; // Muestra solo la imagen actual
+  }
+
+  //------------------------------------------------------------------------
+  // Regalos
+  // Función para mostrar el modal
+  function mostrarModal() {
+    const modal = document.getElementById('modalRegalo');
+    modal.style.display = 'block';
+  }
+
+  // Función para cerrar el modal
+  function cerrarModal() {
+    const modal = document.getElementById('modalRegalo');
+    modal.style.display = 'none';
+  }
+
+  // Cerrar modal al hacer clic fuera de él
+  const modalRegalo = document.getElementById('modalRegalo');
+  window.addEventListener('click', (e) => {
+    if (e.target === modalRegalo) {
+      modalRegalo.style.display = 'none';
+    }
+  });
+
+  // Función para copiar el CBU desde el modal
+  function copiarCBUModal() {
+    const cbuInput = document.getElementById('GfGInput');
+    navigator.clipboard.writeText(cbuInput.value).then(() => {
+      alert('CBU copiado al portapapeles.');
+    });
   }
 });
-
-// Función para copiar el CBU desde el modal
-function copiarCBUModal() {
-  const cbuInput = document.getElementById('GfGInput');
-  navigator.clipboard.writeText(cbuInput.value).then(() => {
-    alert('CBU copiado al portapapeles.');
-  });
-}
