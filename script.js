@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // URL del webhook de Google Apps Script
       const urlGoogleSheets =
-        'https://script.google.com/macros/s/AKfycbyD-znpZK1kV1Qah5Kf8WPWTH2rlFX9LfsNBWcM9WuEhGxT8m6tpOQ5jiBJ8pncN4up/exec'; // Reemplaza con tu URL
+        'https://script.google.com/macros/s/AKfycbx3JGVQsnBPP3MFdK1VwtBCZS_ugga7mi4bScGcM2N_yc9fdXSN8T8GLhTLIH1iZeCi/exec'; // Reemplaza con tu URL
 
       // Enviar los datos a Google Sheets
       fetch(urlGoogleSheets, {
