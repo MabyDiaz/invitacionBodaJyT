@@ -73,6 +73,48 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = 'none';
     }
   });
+
+  document
+    .getElementById('form-confirm')
+    .addEventListener('submit', function (event) {
+      event.preventDefault(); // Evita el envío normal del formulario
+
+      const nombre = document.getElementById('nombre').value;
+      const asistencia = document.querySelector(
+        'input[name="asistencia"]:checked'
+      ).value;
+      const mensaje = `Hola, soy ${nombre}. Confirmo que ${
+        asistencia === 'si' ? 'asistiré' : 'no asistiré'
+      } a la boda.`;
+
+      // Enlace de WhatsApp
+      const linkWhatsApp = `https://wa.me/5493513106413?text=${encodeURIComponent(
+        mensaje
+      )}`;
+      window.open(linkWhatsApp, '_blank');
+
+      // Envía los datos al script de Google Sheets
+      fetch(
+        'https://script.google.com/macros/s/AKfycbxTzThoLgu8vBbWH1QehQxQNlpvkx8gamJhS1mgGIEU6eh-njoOm5_m2DnNdzy14ZKn/exec',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            nombre,
+            asistencia,
+            menu: document.getElementById('menu').value,
+            acompanantes: document.getElementById('acompanantes').value,
+            comentarios: document.getElementById('comentarios').value,
+          }),
+        }
+      ).then((response) => {
+        if (response.ok) {
+          alert('Datos enviados correctamente.');
+        } else {
+          alert('Hubo un error al enviar los datos.');
+        }
+      });
+    });
 });
 
 //------------------------------------------------------------------------
